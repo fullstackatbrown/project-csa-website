@@ -21,6 +21,36 @@
   color: #CF2127
 }
 
+.dropdownIcon:hover {
+  color: #FFE12B;
+  float: right
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FA8072;
+  width: 100%;
+  z-index: 1
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 30px;
+  display: block;
+  text-align: right
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(97, 32, 27)
+
+}
+
 .landingPageText {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -28,4 +58,15 @@
   font-size: 13.0rem;
   line-height: 1.2;
   letter-spacing: -.1rem;
+}
+
+.show {
+  display: block
+}
+
+/* Resize class for landing page main image*/
+.resize {
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
 }
