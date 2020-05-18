@@ -34,7 +34,7 @@
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
 
 </head>
-<body style="height: 100%; overflow:hidden;">
+<body style="height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center;">
 
   <div class="header">
     <i class="fas fa-align-justify dropdownIcon"></i>
@@ -42,13 +42,18 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+  <div class="container" style="display: flex; justify-content: space-between; max-width: 100%; margin-top: 100px; align-items: baseline;">
+
+    <div class="frameDeco">
+      <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
+    </div>
+
     <div class="row">
 
-      <div class="column u-text-center" style="margin-top: 15%;">
+      <div class="column u-text-center" style="margin-top: 15%; width: 100%;">
         <div class="landingPageText"> Brown CSA </div>
 
-        <div class="u-center-block" style="width: 80%;">
+        <div class="u-center-block">
           <img src="images/csaLogo_LandingPage.svg">
         </div>
 
@@ -56,18 +61,14 @@
 
     </div>
 
-
-    <div class="frameDeco" style="float:left;">
-      <img src="images/frameDecoLeftCorner.svg" style="max-height:100%; left: 0px;">
-    </div>
-
-    <div class="frameDeco" style="float:right;">
-      <img src="images/frameDecoRightCorner.svg" style="max-height:100%; right:0px;">
+    <div class="frameDeco">
+      <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
     </div>
 
   </div>
 
-  <div id = "dropDownMenu" class = "open">
+
+  <!-- <div id = "dropDownMenu" class = "open">
     <div class = "content open">
       <a id = "aboutButton" class = "hvr-border-fade">
         ::before
@@ -86,7 +87,7 @@
         " Contact Us ""
       </a>
     </div>
-  </div>
+  </div> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

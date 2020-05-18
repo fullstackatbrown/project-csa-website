@@ -51,7 +51,8 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 100%;
+  }
   .column,
   .columns {
     margin-left: 4%; }
@@ -387,7 +388,7 @@ hr {
 .container:after,
 .row:after,
 .u-cf {
-  content: "";
+  /* content: ""; */
   display: table;
   clear: both; }
 
