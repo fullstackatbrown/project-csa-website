@@ -25,6 +25,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/utils.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type = "text/javascript" src="navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Font Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -38,14 +44,14 @@
 <body style="height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center;">
 
   <div class="header">
-    <a id = "hamburger">
+    <div class = "hamburger">
       <i class="fas fa-align-justify dropdownIcon"></i>
-    </a>
+    </div>
     <div id = "dropdown-content"> 
-      <a href = "#about" class = "hvr-sweep-to-right">About</a>
-      <a href = "#events" class = "hvr-border-fade">Events</a>
-      <a href = "#membership" class = "hvr-border-fade">Membership</a>
-      <a href = "#contact" class = "hvr-border-fade">Contact Us</a>
+      <a href = "about.html" class = "hvr-fade">About</a>
+      <a href = "#events" class = "hvr-fade">Events</a>
+      <a href = "#membership" class = "hvr-fade">Membership</a>
+      <a href = "#contact" class = "hvr-fade">Contact Us</a>
     </div>
   </div>
 
@@ -75,28 +81,6 @@
     </div>
 
   </div>
-
-
-  <!-- <div id = "dropDownMenu" class = "open">
-    <div class = "content open">
-      <a id = "aboutButton" class = "hvr-border-fade">
-        ::before
-        " About ""
-      </a>
-      <a id = "eventsButton" class = "hvr-border-fade">
-        ::before
-        " Events ""
-      </a>
-      <a id = "membershipButton" class = "hvr-border-fade">
-        ::before
-        " Membership ""
-      </a>
-      <a id = "contactButton" class = "hvr-border-fade">
-        ::before
-        " Contact Us ""
-      </a>
-    </div>
-  </div> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

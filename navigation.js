@@ -7,5 +7,7 @@ function menuToggle(){
   }
 }
 
-const hamburger = document.getElementById("hamburger");
-hamburger.addEventListener("click", menuToggle)
+
+document.addEventListener("DOMContentLoaded", function(){
+    $(".hamburger").click(menuToggle)
+})

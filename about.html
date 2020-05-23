@@ -24,6 +24,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/utils.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type = "text/javascript" src="navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Font Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,9 +42,17 @@
 
 <body style="height: 100%; width: 100%;">
 
-  <div class="header">
-    <i class="fas fa-align-justify dropdownIcon"></i>
-  </div>
+    <div class="header">
+        <div class = "hamburger">
+          <i class="fas fa-align-justify dropdownIcon"></i>
+        </div>
+        <div id = "dropdown-content"> 
+          <a href = "index.html" class = "hvr-fade">Home</a>
+          <a href = "#events" class = "hvr-fade">Events</a>
+          <a href = "#membership" class = "hvr-fade">Membership</a>
+          <a href = "#contact" class = "hvr-fade">Contact Us</a>
+        </div>
+      </div>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
