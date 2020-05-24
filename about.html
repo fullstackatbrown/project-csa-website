@@ -24,6 +24,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/utils.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type = "text/javascript" src="navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Font Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -43,7 +49,7 @@
             }
             function unhover(element) {
               element.setAttribute('src', "images/csaLogo.png");
-            }   
+            }
         </script>
         <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
             Brown CSA
