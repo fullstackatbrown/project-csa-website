@@ -32,13 +32,25 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
+
 </head>
+<body>
 
-<body style="height: 100%; width: 100%;">
-
-  <div class="header">
-    <i class="fas fa-align-justify dropdownIcon"></i>
-  </div>
+    <div class="header">
+        <script>
+            function hover(element) {
+              element.setAttribute('src', "images/csaLogoYellow.png");
+            }
+            function unhover(element) {
+              element.setAttribute('src', "images/csaLogo.png");
+            }   
+        </script>
+        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+            Brown CSA
+            <img id="homeIcon" src="images/csaLogo.png">
+        </div>
+        <i class="fas fa-align-justify dropdownIcon"></i>
+    </div>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -144,9 +156,6 @@
           </div>
       </div>
 
-  </div>
-
-
-
+    </div>
 </body>
 </html>
