@@ -44,14 +44,26 @@
 <body style="overflow: hidden;">
 
   <div class="header">
+    <script>
+        function hover(element) {
+          element.setAttribute('src', "images/csaLogoYellow.png");
+        }
+        function unhover(element) {
+          element.setAttribute('src', "images/csaLogo.png");
+        }
+    </script>
+    <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+        Brown CSA
+        <img id="homeIcon" src="images/csaLogo.png">
+    </div>
     <div class = "hamburger">
-      <i class="fas fa-align-justify dropdownIcon"></i>
+        <i class="fas fa-align-justify dropdownIcon"></i>
     </div>
     <div id = "dropdown-content">
-      <a href = "about.html" class = "hvr-fade">About</a>
-      <a href = "#events" class = "hvr-fade">Events</a>
-      <a href = "#membership" class = "hvr-fade">Membership</a>
-      <a href = "#contact" class = "hvr-fade">Contact Us</a>
+        <a href = "about.html" class = "hvr-fade">About</a>
+        <a href = "#events" class = "hvr-fade">Events</a>
+        <a href = "#membership" class = "hvr-fade">Membership</a>
+        <a href = "#contact" class = "hvr-fade">Contact Us</a>
     </div>
   </div>
 
@@ -88,28 +100,6 @@
       <img class="logosmall" src="images/fsab.png">
     </div>
   </footer>
-
-
-  <!-- <div id = "dropDownMenu" class = "open">
-    <div class = "content open">
-      <a id = "aboutButton" class = "hvr-border-fade">
-        ::before
-        " About ""
-      </a>
-      <a id = "eventsButton" class = "hvr-border-fade">
-        ::before
-        " Events ""
-      </a>
-      <a id = "membershipButton" class = "hvr-border-fade">
-        ::before
-        " Membership ""
-      </a>
-      <a id = "contactButton" class = "hvr-border-fade">
-        ::before
-        " Contact Us ""
-      </a>
-    </div>
-  </div> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
