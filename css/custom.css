@@ -69,6 +69,14 @@
 }
 
 #landingPageContainer {
+  height: calc(100vh - 68px);
+  width: 100%;
+  align-items: center; /* change to alter vertical position of content*/ 
+  display: flex;
+  justify-content: center;
+}
+
+.pushBottom {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
