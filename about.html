@@ -43,21 +43,6 @@
 <body>
 
     <div class="header">
-        <script>
-            function hover(element) {
-              element.setAttribute('src', "images/csaLogoYellow.png");
-            }
-            function unhover(element) {
-              element.setAttribute('src', "images/csaLogo.png");
-            }
-            function dropdownToggleScroll() {
-                if (document.body.style.overflow == "hidden") {
-                    document.body.style.overflow = "auto";
-                } else {
-                    document.body.style.overflow = "hidden";
-                }
-            }
-        </script>
         <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
             Brown CSA
             <img id="homeIcon" src="images/csaLogo.png">
