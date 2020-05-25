@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  align-items: center;
+  max-height: 80px;
+  margin-top: 20px;
+}
+
+.homeSection {
+  display: flex;
+  align-items: center;
+  color: #CF2127;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.homeSection img{
+  padding-left: 12px;
+  max-height: 36px;
+}
+
+.homeSection:hover {
+  color: #FFE12B;
+  cursor: pointer;
+}
+
+.hamburger {
+  margin-left: auto;
+}
+
+.dropdownIcon {
+  margin-right: 30px;
+  font-size: 60px;
+  color: #CF2127;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdownIcon:hover {
+  color: #FFE12B;
+  cursor: pointer;
+}
+
+.header #dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FA8072;
+  top: 0;
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.header #dropdown-content a {
+  color: white;
+  margin-top: 10px;
+  padding: 25px 110px;
+  display: block;
+  text-align: right;
+  font-size: 60px;
+  transition: 0.8s;
+}
+
+.header #dropdown-content a:hover {
+  background-color: rgb(97, 32, 27);
+}
+
+#landingPageContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: baseline;
+}
+
+.landingPageText {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-size: 9.5rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+
+.frameDeco {
+  position: relative;
+  width: 40vh;
+  display: block;
+  overflow: hidden;
+}
+
+.footerCredit {
+  opacity: 0.5;
+  font-size: 18px;
+  font-weight: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 18px;
+}
+
+.logosmall {
+  border: 1px solid black;
+  margin-left: 8px;
+  height: 18px;
+  width: auto;
+}
+
+/* @media (max-width: 800px) {
+  .landingPageText {font-size: 8.0rem};
+} */
+
+.show {
+  display: block;
+}

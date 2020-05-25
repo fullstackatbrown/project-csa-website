@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Brown CSA | About Us</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type = "text/javascript" src="navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Font Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://kit.fontawesome.com/274e33ba79.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
+
+</head>
+<body>
+
+    <div class="header">
+        <script>
+            function hover(element) {
+              element.setAttribute('src', "images/csaLogoYellow.png");
+            }
+            function unhover(element) {
+              element.setAttribute('src', "images/csaLogo.png");
+            }
+            function dropdownToggleScroll() {
+                if (document.body.style.overflow == "hidden") {
+                    document.body.style.overflow = "auto";
+                } else {
+                    document.body.style.overflow = "hidden";
+                }
+            }
+        </script>
+        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+            Brown CSA
+            <img id="homeIcon" src="images/csaLogo.png">
+        </div>
+        <div class = "hamburger">
+            <i class="fas fa-align-justify dropdownIcon" onclick="dropdownToggleScroll();"></i>
+        </div>
+        <div id = "dropdown-content">
+            <a href = "about.html" class = "hvr-fade">About</a>
+            <a href = "#events" class = "hvr-fade">Events</a>
+            <a href = "#membership" class = "hvr-fade">Membership</a>
+            <a href = "#contact" class = "hvr-fade">Contact Us</a>
+        </div>
+    </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <div class="row">
+        <div class="column u-text-center" style="margin-top: 4%; width: 100%;">
+            <h1> About Us </h1>
+            <h3> Our Mission </h3>
+            <h5> The Brown University Chinese Students Association seeks to celebrate and embrace Chinese
+                culture at Brown, embodying both international and domestic strata of our diverse community.</h5>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+          <div class="column u-text-center">
+              <h3> The E-Board </h3>
+          </div>
+      </div>
+      <div class="row">
+          <div class="one-half column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 200px; max-width: 200px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Co-President </h6>
+          </div>
+          <div class="one-half column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 200px; max-width: 200px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Co-President </h6>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Treasurer </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Secretary </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Creative Director </h6>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Logistics Chair </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> External Affairs Chair </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Social Chair </h6>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Community Outreach Chair </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Family Chair </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Freshman Rep</h6>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Freshman Rep </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Freshman Rep </h6>
+          </div>
+          <div class="one-third column u-text-center">
+              <img src="images/CSA_E-Board_Frame.png" style="max-height: 180px; max-width: 180px;">
+              <h6 style="margin-bottom: 0; font-weight: bold;"> Insert Name </h6>
+              <h6> Freshman Rep</h6>
+          </div>
+      </div>
+
+    </div>
+</body>
+</html>

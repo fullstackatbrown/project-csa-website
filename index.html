@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,30 +16,90 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link href="hover.css" rel="stylesheet" media="all">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type = "text/javascript" src="navigation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Font Awesome
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://kit.fontawesome.com/274e33ba79.js" crossorigin="anonymous"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
 
 </head>
-<body>
+<body style="overflow: hidden;">
+
+  <div class="header">
+    <script>
+        function hover(element) {
+          element.setAttribute('src', "images/csaLogoYellow.png");
+        }
+        function unhover(element) {
+          element.setAttribute('src', "images/csaLogo.png");
+        }
+    </script>
+    <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+        Brown CSA
+        <img id="homeIcon" src="images/csaLogo.png">
+    </div>
+    <div class = "hamburger">
+        <i class="fas fa-align-justify dropdownIcon"></i>
+    </div>
+    <div id = "dropdown-content">
+        <a href = "about.html" class = "hvr-fade">About</a>
+        <a href = "#events" class = "hvr-fade">Events</a>
+        <a href = "#membership" class = "hvr-fade">Membership</a>
+        <a href = "#contact" class = "hvr-fade">Contact Us</a>
+    </div>
+  </div>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h1>Brown CSA</h1>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content!</p>
-      </div>
+  <div id="landingPageContainer">
+
+    <div class="frameDeco">
+      <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
     </div>
+
+    <div style="margin-top: 10%;">
+
+      <div class="column">
+        <div class="landingPageText u-text-center"> Brown CSA </div>
+
+        <div class="u-center-block">
+          <img src="images/csaLogo_LandingPage.svg">
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="frameDeco">
+      <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
+    </div>
+
   </div>
+
+  <footer>
+    <div class="footerCredit">
+      Created by
+      <img class="logosmall" src="images/fsab.png">
+    </div>
+  </footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
