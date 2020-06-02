@@ -38,13 +38,17 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
-</head>
 
-<body style="height: 100%; width: 100%;">
+</head>
+<body>
 
     <div class="header">
+        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+            Brown CSA
+            <img id="homeIcon" src="images/csaLogo.png">
+        </div>
         <div class = "hamburger">
-          <i class="fas fa-align-justify dropdownIcon"></i>
+            <i class="fas fa-align-justify dropdownIcon" onclick="dropdownToggleScroll();"></i>
         </div>
         <div id = "dropdown-content"> 
           <a href = "index.html" class = "hvr-fade">Home</a>
@@ -52,7 +56,7 @@
           <a href = "#membership" class = "hvr-fade">Membership</a>
           <a href = "contact.html" class = "hvr-fade">Contact Us</a>
         </div>
-      </div>
+    </div>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -158,9 +162,6 @@
           </div>
       </div>
 
-  </div>
-
-
-
+    </div>
 </body>
 </html>
