@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Brown CSA | About Us</title>
+  <title>Brown CSA | Contact Us</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -67,35 +67,38 @@
       </div>
 
       <br>
-      <!-- <div class="four columns">
-        <label for="name" style="font-size: 18px">Your email</label>
-        <input class="u-full-width" type="email" placeholder="exampleEmail@mailbox.com" id="exampleEmailInput">
-      </div> -->
-      <form class= "form" method = "post" action = "sendEmail.php">
+
+      <!-- Form sent to google form linked below, names correspond to elements w/in form
+        will have to change to csa email (currently sent to clara_guo@brown.edu)–––––––––––––––––––––––––––––– -->
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='contactThankYou.html';}">
+      </iframe>
+      <form class= "form" method = "post" action = "https://docs.google.com/forms/u/3/d/e/1FAIpQLSdWKFKkU6orEN132DIShdTfqnIfVhu2LwpRG5h3T8fpWsxxwA/formResponse" target="hidden_iframe" method = "POST" onsubmit="submitted=true;">
         <div class="row" style="padding: 2em 0 0 0">
           <div class="four columns">
             <label for="name" style="font-size: 18px">Your name</label>
-            <input class="u-full-width" type="text" name="name" placeholder="First Last" id="exampleName">
+            <input class="u-full-width" type="text" name="entry.288724605" placeholder="First Last" id="name" required>
           </div>
           <div class="eight columns">
             <label for="reason" style="font-size: 18px">Reason for contacting</label>
-            <select name="reason" class="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Membership</option>
-              <option value="Option 2">Suggestions</option>
-              <option value="Option 3">Event Inquiries/Partnerships</option>
-              <option value="Option 4">Other</option>
+            <select name="entry.1450290688" class="u-full-width" id="reason" required>
+              <option value="Membership">Membership</option>
+              <option value="Suggestions">Suggestions</option>
+              <option value="Event Inquiries/Partnerships">Event Inquiries/Partnerships</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <dix>
             <label for="email" style="font-size: 18px">Your email</label>
-            <input class="u-full-width" type="email" name="email" placeholder="exampleEmail@mailbox.com" id="exampleEmailInput">
+            <input class="u-full-width" type="email" name="entry.1754525478" placeholder="exampleEmail@mailbox.com" id="email">
           </dix>
         </div>
         <label for="message" style="font-size: 18px; padding: 1em 0 0 0">Message</label>
-        <textarea name="message" class="u-full-width" placeholder="Message body" id="exampleMessage"></textarea>
+        <textarea name="entry.1794107787" class="u-full-width" placeholder="Message body" id="message"></textarea>
         <label class="send-yourself-copy">
-          <input type="checkbox" name = "checkbox">
-          <span class="label-body">Send a copy to yourself</span>
+          <input type="hidden" name="entry.1614774306" value="no">
+          <input type="checkbox" name="entry.1614774306" value="yes" />
+          <span class="label-body">Join our Listserv</span>
         </label>
         <input class="button-primary" type="submit" name = "submit" value="Send">
       </form>
@@ -104,7 +107,6 @@
         <div class="btn-toolbar t-button5" role="toolbar" aria-label="Toolbar with button groups">
           <button onclick="window.location.href = 'https://www.facebook.com/BrownCSA/';" class="button3 btn-space">FACEBOOK</button>
           <button onclick="window.location.href = 'https://www.instagram.com/browncsa/?hl=en';" class="button3 btn-space">INSTAGRAM</button>
-          <button onclick="window.location.href = '#anotherForm';" class="button3 btn-space">JOIN OUR LISTSERV</button>
         </div>
       </div>
 
