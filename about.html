@@ -42,31 +42,39 @@
 </head>
 <body>
     <div class="header">
-        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
-          Brown CSA
-          <img id="homeIcon" src="images/csaLogo.png">
+        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" 
+            onmouseout="unhoverHomePage(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+            Brown CSA
+            <img id="homeIcon" src="images/csaLogoWhite.png">
         </div>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-        <div class="line4"></div>
+    
+          <ul class="nav-links">
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+              <div class="line4"></div>
+            </div>
+            <li>
+              <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
+            </li>
+            <li>
+              <a href = "#events" class = "hvr-fade">&#160;Events&#160;</a>
+            </li>
+            <li>
+              <a href = "#membership" class = "hvr-fade">&#160;Membership&#160;</a>
+            </li>
+            <li>
+              <a href = "contact.html" class = "hvr-fade">&#160;Contact Us&#160;</a>
+            </li>
+          </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+        </div>
       </div>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
-      </li>
-      <li>
-        <a href = "#events" class = "hvr-fade">&#160;Events&#160;</a>
-      </li>
-      <li>
-        <a href = "#membership" class = "hvr-fade">&#160;Membership&#160;</a>
-      </li>
-      <li>
-        <a href = "contact.html" class = "hvr-fade">&#160;Contact Us&#160;</a>
-      </li>
-    </ul>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

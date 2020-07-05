@@ -7,7 +7,6 @@ function navSlide(){
   burger.classList.toggle("burger-response");
 
   navLinks.forEach((link, index) => {
-    console.log(index);
     if(link.style.animation){
       link.style.animation = ``;
     } else {
@@ -18,14 +17,20 @@ function navSlide(){
 
 function hover(element) {
   element.setAttribute('src', "images/csaLogoYellow.png");
-}
-
-function unhover(element) {
-  element.setAttribute('src', "images/csaLogo.png");
+  const text = document.querySelector(".homeSection");
+  text.style.color = "#FFE12B";
 }
 
 function unhoverHomePage(element) {
-  element.setAttribute('src', "images/csaLogoWhite.png");
+  const nav = document.querySelector(".nav-links");
+  const text = document.querySelector(".homeSection");
+  if (nav.classList.contains('nav-active')){
+    element.setAttribute('src', "images/csaLogo.png");
+    text.style.color = "#CF2127";
+  } else {
+    element.setAttribute('src', "images/csaLogoWhite.png");
+    text.style.color = "white";
+  }
 }
 
 function dropdownToggleScroll() {
@@ -36,6 +41,23 @@ function dropdownToggleScroll() {
   }
 }
 
+function changeColor() {
+  const logo = document.getElementById('homeIcon');
+  const text = document.querySelector(".homeSection");
+
+  if (logo.getAttribute('src')==="images/csaLogoWhite.png"){
+    logo.setAttribute('src', "images/csaLogo.png");
+    text.style.color = "#CF2127";
+  } else {
+    logo.setAttribute('src', "images/csaLogoWhite.png");
+    text.style.color = "white";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function(){
   $(".burger").click(navSlide)
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+  $(".burger").click(changeColor)
 })
