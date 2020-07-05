@@ -18,6 +18,7 @@
   z-index: 3;
 }
 
+/* Makes just the home page home section default to white */
 #home .homeSection {
   display: flex;
   align-items: center;
@@ -39,21 +40,32 @@
   cursor: pointer;
 }
 
+/* Initially set to display none, but toggles when burger is clicked */
+.dropdownContainer {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+/* Removed white bg color here and moved it to the overall container. Don't need funky 43.5vh margin anymore */
 .nav-links{
   position: absolute;
   display: flex;
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  background-color: white;
   right: 0px;
   flex-direction: column;
   align-items: flex-end;
   transform: translateX(100%);
   transition: transform 0.6s ease-in;
   font-size: 6vmin;
-  z-index:1;
-  margin-top: 43.5vh;
+  z-index: 1;
+  margin-top: 70px;
 }
 
 .nav-links a {
@@ -104,6 +116,13 @@
   margin-right: 30px;
 }
 
+/* This section gives the burger a position value and sets its z-index over dropdownContainer */
+.header .burger {
+  position: inherit;
+  z-index: 2;
+}
+
+/* Makes just the home page burger default to be white */
 #home .burger div{
   width: 40px;
   height: 5px;
@@ -115,25 +134,27 @@
   transition: all 0.25s ease;
 }
 
-#home .nav-links .burger div{
+/* This section isn't necessary anymore if we go this route */
+/* #home .header .burger div{
   width: 40px;
   height: 5px;
   margin-right: 0px;
-  background-color: #CF2127;
+  background-color: white;
   margin: 5px;
   display: flex;
   align-items: flex-end;
   transition: all 0.25s ease;
-}
+} */
 
 #home .burger:hover div{
   cursor: pointer;
-  background-color: #FFE12B;
+  /* Adding important here actually fixes the hover bug! */
+  background-color: #FFE12B!important;
 }
 
 .burger:hover div{
   cursor: pointer;
-  background-color: #FFE12B;
+  background-color: #FFE12B!important;
 }
 
 /* turns burger into a down arrow when hovered */
