@@ -19,8 +19,13 @@ function navSlide(){
 function hover(element) {
   element.setAttribute('src', "images/csaLogoYellow.png");
 }
+
 function unhover(element) {
   element.setAttribute('src', "images/csaLogo.png");
+}
+
+function unhoverHomePage(element) {
+  element.setAttribute('src', "images/csaLogoWhite.png");
 }
 
 function dropdownToggleScroll() {
