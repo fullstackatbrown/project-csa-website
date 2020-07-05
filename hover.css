@@ -1189,8 +1189,8 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #b4a0eb;
-  color: white;
+  background-color: #FFE12B;
+  color: black;
 }
 
 /* Back Pulse */
