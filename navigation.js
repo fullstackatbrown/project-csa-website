@@ -7,16 +7,14 @@ function navSlide(){
   const burger = document.querySelector(".burger");
   const dropdownContainer = document.querySelector(".dropdownContainer");
 
+  //translates the nav links and dropdown container between on and off screen
   nav.classList.toggle("nav-active");
-  burger.classList.toggle("burger-response");
+  dropdownContainer.classList.toggle("dropdownContainer-active");
 
-  // Just toggles between showing the dropdown and not showing it
-  if (dropdownContainer.style.display === "block") {
-    dropdownContainer.style.display = "none";
-  } else {
-    dropdownContainer.style.display = "block";
-  }
+  //toggles between up and down arrow for burger
+  burger.classList.toggle("burger-response");
   
+  //animates the links
   navLinks.forEach((link, index) => {
     if(link.style.animation){
       link.style.animation = ``;
@@ -71,10 +69,10 @@ function changeColor() {
   const burgerDivs = document.querySelectorAll("div.burger > div");
 
   if (logo.getAttribute('src')==="images/csaLogoWhite.png"){
-    /* setTimeout(delayLogoChange = () => { logo.setAttribute('src', "images/csaLogo.png");}, 600);
-    setTimeout(delayTextChange = () => { text.style.color = "#CF2127";}, 600); */
-    logo.setAttribute('src', "images/csaLogo.png");
-    text.style.color = "#CF2127";
+    setTimeout(delayLogoChange = () => { logo.setAttribute('src', "images/csaLogo.png");}, 600);
+    setTimeout(delayTextChange = () => { text.style.color = "#CF2127";}, 600);
+    // logo.setAttribute('src', "images/csaLogo.png");
+    // text.style.color = "#CF2127";
 
     // Changes each burger line to red when opening
     burgerDivs.forEach((line) => {
