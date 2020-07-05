@@ -30,6 +30,7 @@
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type = "text/javascript" src="navigation.js"></script>
+  <script src="slideshow.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Font Awesome
@@ -42,9 +43,9 @@
 
 </head>
 <body style="overflow: hidden;">
-
   <div class="header">
-    <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+    <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" 
+        onmouseout="unhoverHomePage(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
         Brown CSA
         <img id="homeIcon" src="images/csaLogo.png">
     </div>
@@ -59,9 +60,28 @@
     </div>
   </div>
 
+  <div class="homePageContainer">
+    <div class="slideshowBG">
+      <img src="images/slide2.jpg" class="slideshow-img">
+      <img src="images/slide3.jpg" class="slideshow-img">
+      <img src="images/slide4.jpg" class="slideshow-img">
+      <img src="images/slide5.jpg" class="slideshow-img">
+      <img src="images/slide6.jpg" class="slideshow-img">
+      <img src="images/slide7.jpg" class="slideshow-img">
+      <img src="images/slide8.jpg" class="slideshow-img">
+      <img src="images/slide9.jpg" class="slideshow-img">
+      <img src="images/slide10.jpg" class="slideshow-img">
+      <img src="images/slide11.jpg" class="slideshow-img">
+    </div>
+    <div class="homePageText">
+      <img src="images/csaLogo_LandingPage.svg">
+      <h1>Brown CSA</h1>
+    </div>
+  </div>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="landingPageContainer">
+<!--   <div id="landingPageContainer">
     <div class="pushBottom">
       <div class="frameDeco">
         <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
@@ -84,14 +104,11 @@
         <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
       </div>
     </div>
-  </div>
 
-  <!-- <footer>
-    <div class="footerCredit">
-      Created by
-      <img class="logosmall" src="images/fsab.png">
+    <div>
+      
     </div>
-  </footer> -->
+  </div> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

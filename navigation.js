@@ -1,5 +1,6 @@
 function menuToggle(){
   let x = document.getElementById("dropdown-content");
+ 
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -10,8 +11,13 @@ function menuToggle(){
 function hover(element) {
   element.setAttribute('src', "images/csaLogoYellow.png");
 }
+
 function unhover(element) {
   element.setAttribute('src', "images/csaLogo.png");
+}
+
+function unhoverHomePage(element) {
+  element.setAttribute('src', "images/csaLogoWhite.png");
 }
 
 function dropdownToggleScroll() {
