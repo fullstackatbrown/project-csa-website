@@ -10,6 +10,17 @@
 .homeSection {
   display: flex;
   align-items: center;
+  color: #CF2127;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+#home .homeSection {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 30px;
   margin-left: 30px;
@@ -80,11 +91,42 @@
   width: 40px;
   height: 5px;
   margin-right: 0px;
+  background-color: #CF2127;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.25s ease;
+}
+
+.nav-links .burger {
+  margin-right: 30px;
+}
+
+#home .burger div{
+  width: 40px;
+  height: 5px;
+  margin-right: 0px;
   background-color: white;
   margin: 5px;
   display: flex;
   align-items: flex-end;
   transition: all 0.25s ease;
+}
+
+#home .nav-links .burger div{
+  width: 40px;
+  height: 5px;
+  margin-right: 0px;
+  background-color: #CF2127;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.25s ease;
+}
+
+#home .burger:hover div{
+  cursor: pointer;
+  background-color: #FFE12B;
 }
 
 .burger:hover div{
@@ -106,7 +148,6 @@
   background-color: #CF2127;
 }
 
-
 .burger-response:hover .line1{
   transform: scaleX(0.33);
 }
@@ -121,14 +162,6 @@
 
 .burger-response:hover .line4{
   opacity: 0;
-}
-
-#landingPageContainer {
-  height: calc(100vh - 68px);
-  width: 100%;
-  align-items: center; /* change to alter vertical position of content*/ 
-  display: flex;
-  justify-content: center;
 }
 
 .homePageContainer {
@@ -162,54 +195,15 @@
   height: 250px;
 }
 
+/* Decreases home page logo and text for mobile screens */
 @media (max-width: 400px) {
-  .homePageText h1 {font-size: 5.5rem};
+  .homePageText h1 {font-size: 5.5rem;}
+  .homePageText img {height: 200px;}
 }
 
-.show {
-  display: block;
+/* Expands home page logo and text for very large screens*/
+@media (min-width: 2000px) {
+  .homePageText h1 {font-size: 9rem;}
+  .homePageText img {height: 300px;}
 }
-
-./* pushBottom {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  width: 100%;
-  max-height: 100%;
-  align-items: baseline;
-}
-
-.landingPageText {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  font-size: 9.5rem;
-  line-height: 1.2;
-  letter-spacing: -.1rem;
-}
-
-.frameDeco {
-  position: relative;
-  width: 40vh;
-  display: block;
-  overflow: hidden;
-}
-
-.footerCredit {
-  opacity: 0.5;
-  font-size: 18px;
-  font-weight: 100;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 20px;
-  margin-top: 18px;
-}
-
-.logosmall {
-  border: 1px solid black;
-  margin-left: 8px;
-  height: 18px;
-  width: auto;
-} */
 

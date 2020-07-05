@@ -33,6 +33,11 @@ function unhoverHomePage(element) {
   }
 }
 
+function unhoverNormal(element) {
+  element.setAttribute('src', "images/csaLogo.png");
+  document.querySelector(".homeSection").style.color = "#CF2127";
+}
+
 function dropdownToggleScroll() {
   if (document.body.style.overflow == "hidden") {
       document.body.style.overflow = "auto";
@@ -46,8 +51,8 @@ function changeColor() {
   const text = document.querySelector(".homeSection");
 
   if (logo.getAttribute('src')==="images/csaLogoWhite.png"){
-    logo.setAttribute('src', "images/csaLogo.png");
-    text.style.color = "#CF2127";
+    setTimeout(delayLogoChange = () => { logo.setAttribute('src', "images/csaLogo.png");}, 600);
+    setTimeout(delayTextChange = () => { text.style.color = "#CF2127";}, 600);
   } else {
     logo.setAttribute('src', "images/csaLogoWhite.png");
     text.style.color = "white";
@@ -59,5 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 document.addEventListener("DOMContentLoaded", function(){
-  $(".burger").click(changeColor)
+  if(document.getElementById("home")) {
+    $(".burger").click(changeColor)
+  } 
 })
