@@ -84,10 +84,12 @@
   transition: transform 0.25 ease;
 }
 
+/* makes nav menu visible */
 .nav-active {
   transform: translateX(0%);
 }
 
+/* animation of the links in the drop down menu */
 @keyframes navLinkFade{
   from{
     opacity: 0;
@@ -155,6 +157,7 @@
   background-color: #FFE12B!important;
 }
 
+/* turns burger into a down arrow when hovered */
 .burger:hover .line2{
   transform: scaleX(0.66);
 }
@@ -165,10 +168,7 @@
   opacity: 0;
 }
 
-.burger-response div{
-  background-color: #CF2127;
-}
-
+/*turns burger into an up arrow when hovered and nav menu is visible*/
 .burger-response:hover .line1{
   transform: scaleX(0.33);
 }
