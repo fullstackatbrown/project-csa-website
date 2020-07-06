@@ -44,31 +44,10 @@
 
   <div class="header">
     <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" 
-        onmouseout="unhoverHomePage(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+        onmouseout="unhoverNormal(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
         Brown CSA
-        <img id="homeIcon" src="images/csaLogoWhite.png">
+        <img id="homeIcon" src="images/csaLogo.png">
     </div>
-
-      <ul class="nav-links">
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-          <div class="line4"></div>
-        </div>
-        <li>
-          <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
-        </li>
-        <li>
-          <a href = "about.html" class = "hvr-fade">&#160;About&#160;</a>
-        </li>
-        <li>
-          <a href = "#events" class = "hvr-fade">&#160;Events&#160;</a>
-        </li>
-        <li>
-          <a href = "#membership" class = "hvr-fade">&#160;Membership&#160;</a>
-        </li>
-      </ul>
     <div class="burger">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -77,10 +56,46 @@
     </div>
   </div>
   
+  <!-- Moved dropdown outside of header and put it in dropdownContainer -->
+  <div class="dropdownContainer"> 
+    <ul class="nav-links">
+      <li>
+        <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
+      </li>
+      <li>
+        <a href = "about.html" class = "hvr-fade">&#160;About&#160;</a>
+      </li>
+      <li>
+        <a href = "#events" class = "hvr-fade">&#160;Events&#160;</a>
+      </li>
+      <li>
+        <a href = "#membership" class = "hvr-fade">&#160;Membership&#160;</a>
+      </li>
+  </ul>
+  </div>
+
     <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="landingPageContainer">
-      <div class="pushBottom">
+    <div class="thankYouContainer">
+      <div class="prompt">
+        <div class="thankYouText">
+          <h3>Thank You </h3> 
+          <h4>Your Response Has Been Recorded</h4>
+        </div>
+        <div class="logo">
+          <!-- <img src="images/csaLogoBW_icon.svg"> -->
+          <img src="images/csaLogoThankYou.svg" id = photo>
+        </div>
+      </div>
+      <div class = "bottomDecals">
+        <div class="frameDeco">
+          <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
+        </div>
+        <div class="frameDeco">
+          <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
+        </div>
+      </div>
+      <!-- <div class="pushBottom">
         <div class="frameDeco">
           <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
         </div>
@@ -94,7 +109,7 @@
             </div>
   
             <div class="u-center-block">
-              <img src="images/csaLogo_LandingPage.svg">
+              <img src="images/csaLogo.png">
             </div>
   
           </div>
@@ -104,7 +119,7 @@
         <div class="frameDeco">
           <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
         </div>
-      </div>
+      </div> -->
     </div>
 
   </body>
