@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+.joinFam {
+    padding: 50px;
+}
+.description {
+    margin: 0 auto;
+    width: 800px;
+}
+.membershipImage {
+    max-width: 50%;
+    height: auto;
+    margin: 30px 0px 50px 0px;
+}
+.insta, .facebook, .mail {
+    height: 30px;
+    margin-left: 15px;
+}
+
+.insta {
+    height: 28px;
+}
