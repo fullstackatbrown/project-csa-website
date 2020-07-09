@@ -7,12 +7,6 @@ function navSlide(){
   const burger = document.querySelector(".burger");
   const dropdownContainer = document.querySelector(".dropdownContainer");
 
-  // if (dropdownContainer.style.display === "block") {
-  //   dropdownContainer.style.display = "none";
-  // } else {
-  //   dropdownContainer.style.display = "block";
-  // }
-
   //translates the nav links and dropdown container between on and off screen
   nav.classList.toggle("nav-active");
   dropdownContainer.classList.toggle("dropdownContainer-active");
@@ -29,6 +23,36 @@ function navSlide(){
       link.style.animation = `navLinkFade 0.75 ease-in-out forwards ${index/7 +1.15}s`;
     }
   });
+}
+
+//gets rid of page behind the dropdown when nav is active on membership, contact, events
+function displayMajority(){
+  const container = document.querySelector(".container");
+  if (container.style.display === "none") {
+    container.style.display = "block";
+  } else {
+    setTimeout(delayLogoChange = () => { container.style.display = "none";}, 600);
+  }
+}
+
+//gets rid of page behind the dropdown when nav is active on home page, fixes overflow
+function displayLanding() {
+  const homeContainer = document.querySelector(".homePageContainer");
+  if (homeContainer.style.display === "none") {
+    homeContainer.style.display = "block";
+  } else {
+    setTimeout(delayLogoChange = () => { homeContainer.style.display = "none";}, 600);
+  }
+}
+
+//gets rid of page behind the dropdown when nav is active on home page, fixes overflow
+function displayThankYou() {
+  const thankYouContainer = document.querySelector(".thankYouContainer");
+  if (thankYouContainer.style.display === "none") {
+    thankYouContainer.style.display = "block";
+  } else {
+    setTimeout(delayLogoChange = () => { thankYouContainer.style.display = "none";}, 600);
+  }
 }
 
 //turns top left home button to turn yellow on hover
@@ -99,6 +123,13 @@ function changeColor() {
 //activates navSlide function when burger clicked
 document.addEventListener("DOMContentLoaded", function(){
   $(".burger").click(navSlide)
+  if(document.getElementById("home")) {
+    $(".burger").click(displayLanding);
+  }else if(document.getElementById("thankYou")){
+    $(".burger").click(displayThankYou);
+  } else {
+    $(".burger").click(displayMajority);
+  }
 })
 
 //activates changeColor when on landing page

@@ -271,3 +271,7 @@
   display: block;
   overflow: hidden;
 }
+
+.container {
+  display: block;
+}

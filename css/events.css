@@ -20,6 +20,9 @@ body {
     margin-bottom: 3%;
 }
 
+.container {
+  display: block;
+}
 
 /* burger toggles between dropdownContainer and dropdownContainer-active */
 .dropdownContainer {
