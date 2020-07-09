@@ -37,7 +37,7 @@ function displayMajority(){
 
 //gets rid of page behind the dropdown when nav is active on home page, fixes overflow
 function displayLanding() {
-  const homeContainer = document.querySelector(".homePageContainer");
+  const homeContainer = document.querySelector(".home");
   if (homeContainer.style.display === "none") {
     homeContainer.style.display = "block";
   } else {
