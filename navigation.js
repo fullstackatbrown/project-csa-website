@@ -39,7 +39,7 @@ function displayMajority(){
 function displayLanding() {
   const homeContainer = document.querySelector(".homePageContainer");
   if (homeContainer.style.display === "none") {
-    homeContainer.style.display = "block";
+    homeContainer.style.display = "flex";
   } else {
     setTimeout(delayLogoChange = () => { homeContainer.style.display = "none";}, 600);
   }
