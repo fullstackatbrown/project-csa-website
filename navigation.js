@@ -25,36 +25,6 @@ function navSlide(){
   });
 }
 
-//gets rid of page behind the dropdown when nav is active on membership, contact, events
-function displayMajority(){
-  const container = document.querySelector(".container");
-  if (container.style.display === "none") {
-    container.style.display = "block";
-  } else {
-    setTimeout(delayLogoChange = () => { container.style.display = "none";}, 600);
-  }
-}
-
-//gets rid of page behind the dropdown when nav is active on home page, fixes overflow
-function displayLanding() {
-  const homeContainer = document.querySelector(".homePageContainer");
-  if (homeContainer.style.display === "none") {
-    homeContainer.style.display = "flex";
-  } else {
-    setTimeout(delayLogoChange = () => { homeContainer.style.display = "none";}, 600);
-  }
-}
-
-//gets rid of page behind the dropdown when nav is active on home page, fixes overflow
-function displayThankYou() {
-  const thankYouContainer = document.querySelector(".thankYouContainer");
-  if (thankYouContainer.style.display === "none") {
-    thankYouContainer.style.display = "block";
-  } else {
-    setTimeout(delayLogoChange = () => { thankYouContainer.style.display = "none";}, 600);
-  }
-}
-
 //turns top left home button to turn yellow on hover
 function hover(element) {
   element.setAttribute('src', "images/csaLogoYellow.png");
@@ -123,13 +93,6 @@ function changeColor() {
 //activates navSlide function when burger clicked
 document.addEventListener("DOMContentLoaded", function(){
   $(".burger").click(navSlide)
-  if(document.getElementById("home")) {
-    $(".burger").click(displayLanding);
-  }else if(document.getElementById("thankYou")){
-    $(".burger").click(displayThankYou);
-  } else {
-    $(".burger").click(displayMajority);
-  }
 })
 
 //activates changeColor when on landing page
