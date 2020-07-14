@@ -12,10 +12,6 @@ body {
 
 .description {
     margin: 0 auto;
-    width: 45vmax;
-    /* width: 650px; */
-    /* width: 45vw; */
-    /* width: 45%; */
 }
 .event {
     margin-bottom: 3%;

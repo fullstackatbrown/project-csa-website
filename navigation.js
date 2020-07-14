@@ -94,10 +94,13 @@ function changeColor() {
 //gets rid of page behind the dropdown when nav is active on home page, fixes overflow
 function displayLanding() {
   const homeContainer = document.querySelector(".homePageContainer");
+  const welcomeStatement = document.querySelector(".welcomeStatement");
   if (homeContainer.style.display === "none") {
     homeContainer.style.display = "flex";
+    welcomeStatement.style.display = "block";
   } else {
-    setTimeout(delayLogoChange = () => { homeContainer.style.display = "none";}, 600);
+    setTimeout(delayHomePageChange = () => { homeContainer.style.display = "none";}, 600);
+    setTimeout(delayWelcomeStatementChange = () => { welcomeStatement.style.display = "none";}, 600);
   }
 }
 
@@ -107,7 +110,7 @@ function displayMajority(){
   if (container.style.display === "none") {
     container.style.display = "block";
   } else {
-    setTimeout(delayLogoChange = () => { container.style.display = "none";}, 600);
+    setTimeout(delayPageChange = () => { container.style.display = "none";}, 600);
   }
 }
 
@@ -117,7 +120,7 @@ function displayThankYou() {
   if (thankYouContainer.style.display === "none") {
     thankYouContainer.style.display = "block";
   } else {
-    setTimeout(delayLogoChange = () => { thankYouContainer.style.display = "none";}, 600);
+    setTimeout(delayThankYouChange = () => { thankYouContainer.style.display = "none";}, 600);
   }
 }
 
