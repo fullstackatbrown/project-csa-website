@@ -3,12 +3,34 @@
   align-items: center;
   max-height: 80px;
   margin-top: 20px;
+  justify-content: space-between;
+  margin-right: 2vw;
+  margin-bottom: 10px;
+}
+
+.boundingcontainer {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0px;
+  z-index:0;
 }
 
 .homeSection {
   display: flex;
   align-items: center;
   color: #CF2127;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Makes just the home page home section default to white */
+#home .homeSection {
+  display: flex;
+  align-items: center;
+  color: white;
   font-size: 30px;
   margin-left: 30px;
   margin-top: 20px;
@@ -26,72 +48,229 @@
   cursor: pointer;
 }
 
-.hamburger {
-  margin-left: auto;
-}
-
-.dropdownIcon {
-  margin-right: 30px;
-  font-size: 60px;
-  color: #CF2127;
-  position: relative;
-  z-index: 2;
-}
-
-.dropdownIcon:hover {
-  color: #FFE12B;
-  cursor: pointer;
-}
-
-.header #dropdown-content {
-  display: none;
+/* burger toggles between dropdownContainer and dropdownContainer-active */
+.dropdownContainer {
   position: absolute;
-  background-color: #FA8072;
+  width: 100%;
+  height: 100vh;
   top: 0;
-  padding-top: 80px;
+  background-color: white;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in;
+}
+
+.dropdownContainer-active {
+  transform: translateX(0%);
+}
+
+/* Removed white bg color here and moved it to the overall container. Don't need funky 43.5vh margin anymore */
+.nav-links{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
+  right: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in;
+  font-size: 6vmin;
+  z-index: 1;
+  margin-top: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #CF2127;
+  margin-right: 100px;
+  margin-bottom: 15%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a:hover {
+  transform: translateX(-4vmin);
+  transition: transform 0.25 ease;
+}
+
+/* makes nav menu visible */
+.nav-active {
+  transform: translateX(0%);
   z-index: 1;
 }
 
-.header #dropdown-content a {
-  color: white;
-  margin-top: 10px;
-  padding: 25px 110px;
-  display: block;
-  text-align: right;
-  font-size: 60px;
-  transition: 0.8s;
+/* animation of the links in the drop down menu */
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(10vh);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-.header #dropdown-content a:hover {
-  background-color: rgb(97, 32, 27);
+.burger div{
+  width: 40px;
+  height: 5px;
+  margin-right: 0px;
+  background-color: #CF2127;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.25s ease;
 }
 
-#landingPageContainer {
-  height: calc(100vh - 68px);
-  width: 100%;
-  align-items: center; /* change to alter vertical position of content*/ 
+.nav-links .burger {
+  margin-right: 30px;
+}
+
+/* This section gives the burger a position value and sets its z-index over dropdownContainer */
+.header .burger {
+  position: inherit;
+  z-index: 2;
+}
+
+/* Makes just the home page burger default to be white */
+#home .burger div{
+  width: 40px;
+  height: 5px;
+  margin-right: 0px;
+  background-color: white;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.25s ease;
+}
+
+/* This section isn't necessary anymore if we go this route */
+/* #home .header .burger div{
+  width: 40px;
+  height: 5px;
+  margin-right: 0px;
+  background-color: white;
+  margin: 5px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.25s ease;
+} */
+
+#home .burger:hover div{
+  cursor: pointer;
+  /* Adding important here actually fixes the hover bug! */
+  background-color: #FFE12B!important;
+}
+
+.burger:hover div{
+  cursor: pointer;
+  background-color: #FFE12B!important;
+}
+
+/* turns burger into a down arrow when hovered */
+.burger:hover .line2{
+  transform: scaleX(0.66);
+}
+.burger:hover .line3{
+  transform: scaleX(0.33);
+}
+.burger:hover .line4{
+  opacity: 0;
+}
+
+/*turns burger into an up arrow when hovered and nav menu is visible*/
+.burger-response:hover .line1{
+  transform: scaleX(0.33);
+}
+
+.burger-response:hover .line2{
+  transform: scaleX(0.66);
+}
+
+.burger-response:hover .line3{
+  transform: scaleX(1);
+}
+
+.burger-response:hover .line4{
+  opacity: 0;
+}
+
+.homePageContainer {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.pushBottom {
+.slideshow-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(60%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.homePageText h1 {
+  color: white;
+  font-size: 7rem;
+  margin-bottom: 110px;
+}
+
+.homePageText img {
+  height: 250px;
+}
+
+/* Decreases home page logo and text for mobile screens */
+@media (max-width: 400px) {
+  .homePageText h1 {font-size: 5.5rem;}
+  .homePageText img {height: 200px;}
+}
+
+/* Expands home page logo and text for very large screens*/
+@media (min-width: 2000px) {
+  .homePageText h1 {font-size: 9rem;}
+  .homePageText img {height: 300px;}
+}
+
+.thankYouContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 87.5vh;
+  margin-top: 80px;
+}
+
+.prompt{
+  text-align: center;
+  color: #CF2127;
+}
+
+.logo #photo{
+  position: relative;
+  width: 50vmin;
+  height: auto;
+}
+
+.bottomDecals {
   display: flex;
   justify-content: space-between;
-  max-width: 100%;
+  align-items: center;
   width: 100%;
-  max-height: 100%;
-  align-items: baseline;
-}
-
-.landingPageText {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  font-size: 9.5rem;
-  line-height: 1.2;
-  letter-spacing: -.1rem;
+  height: 100;
+  margin-bottom: 1vh;
 }
 
 .frameDeco {
@@ -101,28 +280,6 @@
   overflow: hidden;
 }
 
-.footerCredit {
-  opacity: 0.5;
-  font-size: 18px;
-  font-weight: 100;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 20px;
-  margin-top: 18px;
-}
-
-.logosmall {
-  border: 1px solid black;
-  margin-left: 8px;
-  height: 18px;
-  width: auto;
-}
-
-/* @media (max-width: 800px) {
-  .landingPageText {font-size: 8.0rem};
-} */
-
-.show {
+.container {
   display: block;
 }

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -30,6 +29,7 @@
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type = "text/javascript" src="navigation.js"></script>
+  <script src="slideshow.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Font Awesome
@@ -41,59 +41,68 @@
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
 
 </head>
-<body style="overflow: hidden;">
+<body id="home">
+<div class="boundingcontainer">
+     <div class="header">
+      <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));"
+          onmouseout="unhoverHomePage(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
+          Brown CSA
+          <img id="homeIcon" src="images/csaLogoWhite.png">
+      </div>
 
-  <div class="header">
-    <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" onmouseout="unhover(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
-        Brown CSA
-        <img id="homeIcon" src="images/csaLogo.png">
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+      </div>
     </div>
-    <div class = "hamburger">
-        <i class="fas fa-align-justify dropdownIcon"></i>
-    </div>
-    <div id = "dropdown-content"> 
-      <a href = "about.html" class = "hvr-fade">About</a>
-      <a href = "#events" class = "hvr-fade">Events</a>
-      <a href = "#membership" class = "hvr-fade">Membership</a>
-      <a href = "contact.html" class = "hvr-fade">Contact Us</a>
-    </div>
+
+  <!-- Moved dropdown outside of header and put it in dropdownContainer -->
+  <div class="dropdownContainer">
+    <ul class="nav-links">
+      <!--  <div class="burger">
+         <div class="line1"></div>
+         <div class="line2"></div>
+         <div class="line3"></div>
+         <div class="line4"></div>
+       </div> -->
+       <li>
+         <a href = "about.html" class = "hvr-fade">&#160;About&#160;</a>
+       </li>
+       <li>
+         <a href = "events.html" class = "hvr-fade">&#160;Events&#160;</a>
+       </li>
+       <li>
+         <a href = "membership.html" class = "hvr-fade">&#160;Membership&#160;</a>
+       </li>
+       <li>
+         <a href = "contact.html" class = "hvr-fade">&#160;Contact Us&#160;</a>
+       </li>
+  </ul>
   </div>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="landingPageContainer">
-    <div class="pushBottom">
-      <div class="frameDeco">
-        <img src="images/frameDecoLeftCorner.svg" style="max-width: 50%; float: left; margin-left: 20px;">
-      </div>
-
-      <div style="margin-top: 10%;">
-
-        <div class="column">
-          <div class="landingPageText u-text-center"> Brown CSA </div>
-
-          <div class="u-center-block">
-            <img src="images/csaLogo_LandingPage.svg">
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="frameDeco">
-        <img src="images/frameDecoRightCorner.svg" style="max-width: 50%; float: right; margin-right: 20px;">
-      </div>
+  <div class="homePageContainer">
+    <div class="slideshowBG">
+      <img src="images/slide2.jpg" class="slideshow-img">
+      <img src="images/slide3.jpg" class="slideshow-img">
+      <img src="images/slide4.jpg" class="slideshow-img">
+      <img src="images/slide5.jpg" class="slideshow-img">
+      <img src="images/slide6.jpg" class="slideshow-img">
+      <img src="images/slide7.jpg" class="slideshow-img">
+      <img src="images/slide8.jpg" class="slideshow-img">
+      <img src="images/slide9.jpg" class="slideshow-img">
+      <img src="images/slide10.jpg" class="slideshow-img">
+      <img src="images/slide11.jpg" class="slideshow-img">
+    </div>
+    <div class="homePageText">
+      <img src="images/csaLogo_LandingPage.svg">
+      <h1>Brown CSA</h1>
     </div>
   </div>
-
-  <!-- <footer>
-    <div class="footerCredit">
-      Created by
-      <img class="logosmall" src="images/fsab.png">
-    </div>
-  </footer> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</div>
 </body>
 </html>
