@@ -11,8 +11,8 @@
 .boundingcontainer {
   overflow-x: hidden;
   position: relative;
+  height: 100vh;
   margin: 0px;
-  z-index:0;
 }
 
 .homeSection {
@@ -109,7 +109,6 @@
 /* makes nav menu visible */
 .nav-active {
   transform: translateX(0%);
-  z-index: 1;
 }
 
 /* animation of the links in the drop down menu */
