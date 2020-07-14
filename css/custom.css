@@ -48,6 +48,15 @@
   cursor: pointer;
 }
 
+.welcomeStatement {
+  padding: 0% 10% 3% 10%;
+  background-color: white;
+}
+
+.welcomeStatement p {
+  font-size: 1.7rem
+}
+
 /* burger toggles between dropdownContainer and dropdownContainer-active */
 .dropdownContainer {
   position: absolute;
@@ -147,18 +156,6 @@
   align-items: flex-end;
   transition: all 0.25s ease;
 }
-
-/* This section isn't necessary anymore if we go this route */
-/* #home .header .burger div{
-  width: 40px;
-  height: 5px;
-  margin-right: 0px;
-  background-color: white;
-  margin: 5px;
-  display: flex;
-  align-items: flex-end;
-  transition: all 0.25s ease;
-} */
 
 #home .burger:hover div{
   cursor: pointer;
