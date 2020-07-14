@@ -7,12 +7,6 @@ function navSlide(){
   const burger = document.querySelector(".burger");
   const dropdownContainer = document.querySelector(".dropdownContainer");
 
-  // if (dropdownContainer.style.display === "block") {
-  //   dropdownContainer.style.display = "none";
-  // } else {
-  //   dropdownContainer.style.display = "block";
-  // }
-
   //translates the nav links and dropdown container between on and off screen
   nav.classList.toggle("nav-active");
   dropdownContainer.classList.toggle("dropdownContainer-active");

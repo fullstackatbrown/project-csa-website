@@ -41,14 +41,15 @@
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
 
 </head>
-<body id="home" style="overflow-X: hidden;">
-    <div class="header">
+<body id="home">
+<div class="boundingcontainer">
+     <div class="header">
       <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));"
           onmouseout="unhoverHomePage(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
           Brown CSA
           <img id="homeIcon" src="images/csaLogoWhite.png">
       </div>
-        
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -56,9 +57,9 @@
         <div class="line4"></div>
       </div>
     </div>
-  
+
   <!-- Moved dropdown outside of header and put it in dropdownContainer -->
-  <div class="dropdownContainer"> 
+  <div class="dropdownContainer">
     <ul class="nav-links">
       <!--  <div class="burger">
          <div class="line1"></div>
@@ -102,5 +103,6 @@
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</div>
 </body>
 </html>

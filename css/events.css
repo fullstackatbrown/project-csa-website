@@ -7,12 +7,13 @@ body {
     margin: 30px 0px 70px 0px;
 }
 .banner {
-    height: 350px;
+    height: 45vmin;
 }
 
 .description {
     margin: 0 auto;
-    width: 650px;
+    width: 45vmax;
+    /* width: 650px; */
     /* width: 45vw; */
     /* width: 45%; */
 }
@@ -20,6 +21,9 @@ body {
     margin-bottom: 3%;
 }
 
+.container {
+  display: block;
+}
 
 /* burger toggles between dropdownContainer and dropdownContainer-active */
 .dropdownContainer {

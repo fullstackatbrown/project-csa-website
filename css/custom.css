@@ -5,6 +5,14 @@
   margin-top: 20px;
   justify-content: space-between;
   margin-right: 2vw;
+  margin-bottom: 10px;
+}
+
+.boundingcontainer {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0px;
+  z-index:0;
 }
 
 .homeSection {
@@ -50,7 +58,6 @@
   z-index: 1;
   transform: translateX(100%);
   transition: transform 0.6s ease-in;
-  overflow: hidden;
 }
 
 .dropdownContainer-active {
@@ -93,6 +100,7 @@
 /* makes nav menu visible */
 .nav-active {
   transform: translateX(0%);
+  z-index: 1;
 }
 
 /* animation of the links in the drop down menu */
@@ -270,4 +278,8 @@
   width: 40vh;
   display: block;
   overflow: hidden;
+}
+
+.container {
+  display: block;
 }
