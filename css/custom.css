@@ -289,7 +289,7 @@
 
 .allen-wang-container::after {
   position: fixed; 
-  top: 90%;
+  top: 92%;
   left: 90%; 
   content: "Allen's Easter Egg";
   color: rgba(0, 0, 0, 0.7);
