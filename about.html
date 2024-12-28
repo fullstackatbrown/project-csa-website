@@ -38,7 +38,74 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const allenWangImage = document.getElementById("allen-wang-image");
 
+    let cursorX = 0;
+    let cursorY = 0;
+    let isConfettiActive = false;
+    let confettiInterval = null;
+
+    document.addEventListener("mousemove", function (event) {
+      cursorX = event.clientX / window.innerWidth;
+      cursorY = event.clientY / window.innerHeight;
+    });
+
+    allenWangImage.addEventListener("click", function () {
+      if (isConfettiActive) {
+        clearInterval(confettiInterval); 
+        isConfettiActive = false; 
+      } else {
+        isConfettiActive = true; 
+        confetti({
+            particleCount: 100,
+            spread: 360,
+            angle: 360,
+            startVelocity: 20,
+            origin: { x: cursorX, y: cursorY }, 
+          });
+        confettiInterval = setInterval(() => {
+          confetti({
+            particleCount: 100,
+            spread: 360,
+            angle: 360,
+            startVelocity: 20,
+            origin: { x: cursorX, y: cursorY }, 
+          });
+        }, 750); 
+      }
+    });
+  });
+  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".allen-wang-container");
+    const textElement = container.querySelector("h6:first-of-type");
+
+    const activate = () => {
+      textElement.textContent = "Click Me";
+    };
+
+    const deactivate = () => {
+      textElement.textContent = "Allen Wang '26";
+    };
+
+    container.addEventListener("mouseover", activate);
+    container.addEventListener("mouseout", deactivate);
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (isMobile) {
+      setInterval(() => {
+        activate();
+        setTimeout(() => {
+          deactivate();
+        }, 750);
+      }, 5000);
+    }
+  });
+  </script>
 </head>
 <body id="common">
   <div class="boundingcontainer">
@@ -164,12 +231,12 @@
         <h6 style="margin-bottom: 0; font-weight: bold;"> Helen Chow '26</h6>
         <h6> Treasurer </h6>
     </div>
-      <div class="one-third column u-text-center ">
+      <div class="one-third column u-text-center">
         <div class="allen-wang-container">
-          <img class="allen-wang" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px;">
-      </div>
-        <h6 style="margin-bottom: 0; font-weight: bold;"> Allen Wang '26</h6>
-        <h6> Outreach Chair </h6>
+          <img id="allen-wang-image" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px;">
+          <h6 style="margin-bottom: 0; font-weight: bold;"> Allen Wang '26</h6>
+          <h6> Outreach Chair </h6>
+        </div>
     </div>
 
       </div>
