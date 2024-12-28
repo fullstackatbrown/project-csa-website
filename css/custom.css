@@ -281,3 +281,27 @@
 .container {
   display: block;
 }
+
+.allen-wang-container {
+  position: relative;
+  display: inline-block; /* Ensure proper sizing for pseudo-element positioning */
+}
+
+.allen-wang-container::after {
+  position: fixed; 
+  top: 90%;
+  left: 90%; 
+  content: "Allen's Easter Egg";
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+}
+
+.allen-wang-container:hover::after {
+  opacity: 1; 
+}
