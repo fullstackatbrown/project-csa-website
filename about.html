@@ -41,7 +41,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const allenWangImage = document.getElementById("allen-wang-image");
+    const easterEggImage = document.getElementById("easter-egg-image");
 
     let cursorX = 0;
     let cursorY = 0;
@@ -53,7 +53,7 @@
       cursorY = event.clientY / window.innerHeight;
     });
 
-    allenWangImage.addEventListener("click", function () {
+    easterEggImage.addEventListener("click", function () {
       if (isConfettiActive) {
         clearInterval(confettiInterval); 
         isConfettiActive = false; 
@@ -81,7 +81,7 @@
   </script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".allen-wang-container");
+    const container = document.querySelector(".easter-egg-container");
     const textElement = container.querySelector("h6:first-of-type");
 
     const activate = () => {
@@ -105,6 +105,46 @@
       }, 5000);
     }
   });
+  </script>
+
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+  (function(){
+  emailjs.init({
+    publicKey: "HAE9L_i1UrcwLzBXO",
+  });
+  })();
+</script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let clicked = false
+      const image = document.getElementById("easter-egg-image");
+      const userAgent = navigator.userAgent;
+      const device = /Mobi|Android|iPhone|iPad|iPod/i.test(userAgent) ? "Mobile" : "Computer";
+
+      let emailData = { device: device }
+  
+      image.addEventListener("click", function () {
+        if (!clicked) {
+          fetch("https://ipinfo.io/json?token=94a3be90d5f180")
+        .then((response) => response.json())
+        .then((locationData) => {
+          emailData = {...emailData,
+            location: `${locationData.city}, ${locationData.region}, ${locationData.country}`,
+          };
+
+          emailjs
+          .send("service_d31m5xh", "template_ji04l1v", emailData)
+      }) .catch((error) => {
+          emailjs.send("service_d31m5xh", "template_ji04l1v", emailData)
+        });;
+        clicked = true
+        }
+
+        })
+    });
   </script>
 </head>
 <body id="common">
@@ -232,8 +272,8 @@
         <h6> Treasurer </h6>
     </div>
       <div class="one-third column u-text-center">
-        <div class="allen-wang-container">
-          <img id="allen-wang-image" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px;">
+        <div class="easter-egg-container">
+          <img id="easter-egg-image" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px;">
           <h6 style="margin-bottom: 0; font-weight: bold;"> Allen Wang '26</h6>
           <h6> Outreach Chair </h6>
         </div>
