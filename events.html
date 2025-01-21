@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Brown CSA | Events</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FONT
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="stylesheet" href="css/events.css">
-    <link href="hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link href="hover.css" rel="stylesheet" media="all" />
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,16 +37,33 @@
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
-</head>
+    <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg" />
 
-<body id="common">
-    <div class = "boundingcontainer">
-    <div class="header">
-        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" 
-            onmouseout="unhoverNormal(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
-            Brown CSA
-            <img id="homeIcon" src="images/csaLogo.png">
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new MutationObserver(() => {
+          const referral = document.querySelector(".referral");
+          if (referral) {
+            referral.style.display = "none";
+          }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
+    </script>
+  </head>
+
+  <body id="common">
+    <div class="boundingcontainer">
+      <div class="header">
+        <div
+          class="homeSection"
+          onmouseover="hover(document.getElementById('homeIcon'));"
+          onmouseout="unhoverNormal(document.getElementById('homeIcon'));"
+          onclick="location.href = 'index.html';"
+        >
+          Brown CSA
+          <img id="homeIcon" src="images/csaLogo.png" />
         </div>
         <div class="burger">
           <div class="line1"></div>
@@ -56,30 +71,35 @@
           <div class="line3"></div>
           <div class="line4"></div>
         </div>
-    </div>
+      </div>
 
-  <!-- Moved dropdown outside of header and put it in dropdownContainer -->
-  <div class="dropdownContainer"> 
-    <ul class="nav-links">
-      <li>
-        <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
-      </li>
-      <li>
-        <a href = "about.html" class = "hvr-fade">&#160;About&#160;</a>
-      </li>
-      <li>
-        <a href = "membership.html" class = "hvr-fade">&#160;Membership&#160;</a>
-      </li>
-      <!-- <li>
+      <!-- Moved dropdown outside of header and put it in dropdownContainer -->
+      <div class="dropdownContainer">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="hvr-fade">&#160;Home&#160;</a>
+          </li>
+          <li>
+            <a href="about.html" class="hvr-fade">&#160;About&#160;</a>
+          </li>
+          <li>
+            <a href="membership.html" class="hvr-fade">&#160;Membership&#160;</a>
+          </li>
+          <!-- <li>
         <a href = "contact.html" class = "hvr-fade">&#160;Contact Us&#160;</a>
       </li> -->
-  </ul>
-  </div>
-  <div class="container">
-    <h1>Events</h1>
-    <h5 class="waitMessage">Stay tuned for more events!</h5>
-    <script type="text/javascript" src="https://www.juicer.io/embed/browncsa/embed-code.js?gutter=20" async defer></script>
- 
+        </ul>
+      </div>
+      <div class="container">
+        <h1>Events</h1>
+        <h5 class="waitMessage">Stay tuned for more events!</h5>
+        <script
+          type="text/javascript"
+          src="https://www.juicer.io/embed/browncsa/embed-code.js?gutter=20"
+          async
+          defer
+        ></script>
+      </div>
     </div>
-</div>
-</body>
+  </body>
+</html>

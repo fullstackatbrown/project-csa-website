@@ -1,159 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Brown CSA | About Us</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Brown CSA | About Us</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/utils.css">
-  <link href="hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link href="hover.css" rel="stylesheet" media="all" />
 
-  <!-- JS
+    <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type = "text/javascript" src="navigation.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="navigation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- Font Awesome
+    <!-- Font Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://kit.fontawesome.com/274e33ba79.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/274e33ba79.js" crossorigin="anonymous"></script>
 
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg">
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const easterEggImage = document.getElementById("easter-egg-image");
+    <link rel="icon" type="image/png" href="images/csaLogoBW_icon.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const easterEggImage = document.getElementById("easter-egg-image");
 
-    let cursorX = 0;
-    let cursorY = 0;
-    let isConfettiActive = false;
-    let confettiInterval = null;
+        let cursorX = 0;
+        let cursorY = 0;
+        let isConfettiActive = false;
+        let confettiInterval = null;
 
-    document.addEventListener("mousemove", function (event) {
-      cursorX = event.clientX / window.innerWidth;
-      cursorY = event.clientY / window.innerHeight;
-    });
+        document.addEventListener("mousemove", function (event) {
+          cursorX = event.clientX / window.innerWidth;
+          cursorY = event.clientY / window.innerHeight;
+        });
 
-    easterEggImage.addEventListener("click", function () {
-      if (isConfettiActive) {
-        clearInterval(confettiInterval); 
-        isConfettiActive = false; 
-      } else {
-        isConfettiActive = true; 
-        confetti({
-            particleCount: 100,
-            spread: 360,
-            angle: 360,
-            startVelocity: 20,
-            origin: { x: cursorX, y: cursorY }, 
-          });
-        confettiInterval = setInterval(() => {
-          confetti({
-            particleCount: 100,
-            spread: 360,
-            angle: 360,
-            startVelocity: 20,
-            origin: { x: cursorX, y: cursorY }, 
-          });
-        }, 750); 
-      }
-    });
-  });
-  </script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".easter-egg-container");
-    const textElement = container.querySelector("h6:first-of-type");
+        easterEggImage.addEventListener("click", function () {
+          if (isConfettiActive) {
+            clearInterval(confettiInterval);
+            isConfettiActive = false;
+          } else {
+            isConfettiActive = true;
+            confetti({
+              particleCount: 100,
+              spread: 360,
+              angle: 360,
+              startVelocity: 20,
+              origin: { x: cursorX, y: cursorY },
+            });
+            confettiInterval = setInterval(() => {
+              confetti({
+                particleCount: 100,
+                spread: 360,
+                angle: 360,
+                startVelocity: 20,
+                origin: { x: cursorX, y: cursorY },
+              });
+            }, 750);
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".easter-egg-container");
+        const textElement = container.querySelector("h6:first-of-type");
 
-    const activate = () => {
-      textElement.textContent = "Click Me";
-    };
+        const activate = () => {
+          textElement.textContent = "Click Me";
+        };
 
-    const deactivate = () => {
-      textElement.textContent = "Allen Wang '26";
-    };
+        const deactivate = () => {
+          textElement.textContent = "Allen Wang '26";
+        };
 
-    container.addEventListener("mouseover", activate);
-    container.addEventListener("mouseout", deactivate);
+        container.addEventListener("mouseover", activate);
+        container.addEventListener("mouseout", deactivate);
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    if (isMobile) {
-      setInterval(() => {
-        activate();
-        setTimeout(() => {
-          deactivate();
-        }, 750);
-      }, 5000);
-    }
-  });
-  </script>
-
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-  (function(){
-  emailjs.init({
-    publicKey: "HAE9L_i1UrcwLzBXO",
-  });
-  })();
-</script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let clicked = false
-      const image = document.getElementById("easter-egg-image");
-      const userAgent = navigator.userAgent;
-      const device = /Mobi|Android|iPhone|iPad|iPod/i.test(userAgent) ? "Mobile" : "Computer";
-
-      let emailData = { device: device }
-  
-      image.addEventListener("click", function () {
-        if (!clicked) {
-          fetch("https://ipinfo.io/json?token=94a3be90d5f180")
-        .then((response) => response.json())
-        .then((locationData) => {
-          emailData = {...emailData,
-            location: `${locationData.city}, ${locationData.region}, ${locationData.country}`,
-          };
-
-          emailjs
-          .send("service_d31m5xh", "template_ji04l1v", emailData)
-      }) .catch((error) => {
-          emailjs.send("service_d31m5xh", "template_ji04l1v", emailData)
-        });;
-        clicked = true
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile) {
+          setInterval(() => {
+            activate();
+            setTimeout(() => {
+              deactivate();
+            }, 750);
+          }, 5000);
         }
+      });
+    </script>
 
-        })
-    });
-  </script>
-</head>
-<body id="common">
-  <div class="boundingcontainer">
-    <div class="header">
-        <div class="homeSection" onmouseover="hover(document.getElementById('homeIcon'));" 
-            onmouseout="unhoverNormal(document.getElementById('homeIcon'));" onclick="location.href = 'index.html';">
-            Brown CSA
-            <img id="homeIcon" src="images/csaLogo.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "HAE9L_i1UrcwLzBXO",
+        });
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let clicked = false;
+        const image = document.getElementById("easter-egg-image");
+        const userAgent = navigator.userAgent;
+        const device = /Mobi|Android|iPhone|iPad|iPod/i.test(userAgent) ? "Mobile" : "Computer";
+
+        let emailData = { device: device };
+
+        image.addEventListener("click", function () {
+          if (!clicked) {
+            fetch("https://ipinfo.io/json?token=94a3be90d5f180")
+              .then((response) => response.json())
+              .then((locationData) => {
+                emailData = {
+                  ...emailData,
+                  location: `${locationData.city}, ${locationData.region}, ${locationData.country}`,
+                };
+
+                emailjs.send("service_d31m5xh", "template_ji04l1v", emailData);
+              })
+              .catch((error) => {
+                emailjs.send("service_d31m5xh", "template_ji04l1v", emailData);
+              });
+            clicked = true;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body id="common">
+    <div class="boundingcontainer">
+      <div class="header">
+        <div
+          class="homeSection"
+          onmouseover="hover(document.getElementById('homeIcon'));"
+          onmouseout="unhoverNormal(document.getElementById('homeIcon'));"
+          onclick="location.href = 'index.html';"
+        >
+          Brown CSA
+          <img id="homeIcon" src="images/csaLogo.png" />
         </div>
         <div class="burger">
           <div class="line1"></div>
@@ -161,167 +162,160 @@
           <div class="line3"></div>
           <div class="line4"></div>
         </div>
-    </div>
+      </div>
 
-  <!-- Moved dropdown outside of header and put it in dropdownContainer -->
-  <div class="dropdownContainer"> 
-    <ul class="nav-links">
-      <li>
-        <a href = "index.html" class = "hvr-fade">&#160;Home&#160;</a>
-      </li>
-      <li>
-        <a href = "events.html" class = "hvr-fade">&#160;Events&#160;</a>
-      </li>
-      <li>
-        <a href = "membership.html" class = "hvr-fade">&#160;Membership&#160;</a>
-      </li>
-      <!-- <li>
+      <!-- Moved dropdown outside of header and put it in dropdownContainer -->
+      <div class="dropdownContainer">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="hvr-fade">&#160;Home&#160;</a>
+          </li>
+          <li>
+            <a href="events.html" class="hvr-fade">&#160;Events&#160;</a>
+          </li>
+          <li>
+            <a href="membership.html" class="hvr-fade">&#160;Membership&#160;</a>
+          </li>
+          <!-- <li>
         <a href = "contact.html" class = "hvr-fade">&#160;Contact Us&#160;</a>
       </li> -->
-  </ul>
-  </div>
+        </ul>
+      </div>
 
-  <!-- Primary Page Layout
+      <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container" id = "aboutContainer">
-      <div class="row">
-        <div class="column u-text-center" style="margin-top: 4%; width: 100%;">
-            <h1> About Us </h1>
-            <h3> Our Mission </h3>
-            <h5> The Brown University Chinese Students Association seeks to celebrate and embrace Chinese
-                culture at Brown, embodying both international and domestic strata of our diverse community.
-                Through sponsored lectures, annual Chinese holiday celebrations, general body assemblies and social events,
-                CSA hopes to foster forums for students to experience and discuss Chinese culture. </h5>
+      <div class="container" id="aboutContainer">
+        <div class="row">
+          <div class="column u-text-center" style="margin-top: 4%; width: 100%">
+            <h1>About Us</h1>
+            <h3>Our Mission</h3>
+            <h5>
+              The Brown University Chinese Students Association seeks to celebrate and embrace Chinese culture at Brown,
+              embodying both international and domestic strata of our diverse community. Through sponsored lectures,
+              annual Chinese holiday celebrations, general body assemblies and social events, CSA hopes to foster forums
+              for students to experience and discuss Chinese culture.
+            </h5>
+          </div>
         </div>
-      </div>
 
-      <br>
+        <br />
 
-      <div class="row">
+        <div class="row">
           <div class="column u-text-center">
-              <h3> The E-Board </h3>
+            <h3>The E-Board</h3>
           </div>
-      </div>
-      <div class="row">
+        </div>
+        <div class="row">
           <div class="one-third column u-text-center">
-              <img src="images/Sudy Qin1.jpg" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Sudy Qin '25 </h6>
-              <h6> Co-President </h6>
-          </div>
-          <div class="one-third column u-text-center">
-              <img src="images/Evan Ren 1.jpg" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Evan Ren '25</h6>
-              <h6> Co-President </h6>
+            <img src="images/Sudy Qin1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Sudy Qin '25</h6>
+            <h6>Co-President</h6>
           </div>
           <div class="one-third column u-text-center">
-            <img src="images/Austin Xiang 1.jpg" style="max-height: 200px; max-width: 200px;">
-            <h6 style="margin-bottom: 0; font-weight: bold;"> Austin Xiang '26</h6>
-            <h6> Vice President </h6>
+            <img src="images/Evan Ren 1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Evan Ren '25</h6>
+            <h6>Co-President</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Austin Xiang 1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Austin Xiang '26</h6>
+            <h6>Vice President</h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third column u-text-center">
+            <img src="images/Ryan.JPG" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Ryan Fung '25</h6>
+            <h6>Senior Advisor</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Michael Fu1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Michael Fu '25</h6>
+            <h6>Senior Advisor</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Alex Liang1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Alex Liang '25</h6>
+            <h6>External Liasion</h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third column u-text-center">
+            <img src="images/Derek Yang 2.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Derek Yang '26</h6>
+            <h6>Culture Chair</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Kelvin Jiang 3.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Kelvin Jiang '26</h6>
+            <h6>Logistics</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Catherine Jia 1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Catherine Jia '26</h6>
+            <h6>Creative</h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third column u-text-center">
+            <img src="images/Yiyun.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Yiyun Li '26</h6>
+            <h6>Social</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Helen Chow1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Helen Chow '26</h6>
+            <h6>Treasurer</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <div class="easter-egg-container">
+              <img id="easter-egg-image" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px" />
+              <h6 style="margin-bottom: 0; font-weight: bold">Allen Wang '26</h6>
+              <h6>Outreach Chair</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third column u-text-center">
+            <img src="images/Daniel Zhao 1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Daniel Zhao '27</h6>
+            <h6>Outreach Chair</h6>
+          </div>
+
+          <div class="one-third column u-text-center">
+            <img src="images/Rosy Sun1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Rosy Sun '27</h6>
+            <h6>Family Chair</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Athena Deng1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Athena Deng '27</h6>
+            <h6>Family Chair</h6>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="one-third column u-text-center">
+            <img src="images/Irene Lee1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Irene Zhao '27</h6>
+            <h6>Treasurer</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Eric Yang1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Eric Yang '28</h6>
+            <h6>Freshman Rep</h6>
+          </div>
+          <div class="one-third column u-text-center">
+            <img src="images/Amanda Deng1.jpg" style="max-height: 200px; max-width: 200px" />
+            <h6 style="margin-bottom: 0; font-weight: bold">Amanda Deng '28</h6>
+            <h6>Freshman Rep</h6>
+          </div>
         </div>
       </div>
-
-      <div class="row">
-
-          <div class="one-third column u-text-center">
-              <img src="images/Ryan.JPG" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Ryan Fung '25</h6>
-              <h6> Senior Advisor </h6>
-          </div>
-          <div class="one-third column u-text-center">
-              <img src="images/Michael Fu1.jpg" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Michael Fu '25</h6>
-              <h6> Senior Advisor </h6>
-          </div>
-          <div class="one-third column u-text-center">
-            <img src="images/Alex Liang1.jpg" style="max-height: 200px; max-width: 200px;">
-            <h6 style="margin-bottom: 0; font-weight: bold;"> Alex Liang '25</h6>
-            <h6> External Liasion </h6>
-        </div>
-      </div>
-
-      <div class="row">
-
-          <div class="one-third column u-text-center">
-              <img src="images/Derek Yang 2.jpg" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Derek Yang '26</h6>
-              <h6> Culture Chair </h6>
-          </div>
-          <div class="one-third column u-text-center">
-            <img src="images/Kelvin Jiang 3.jpg" style="max-height: 200px; max-width: 200px;">
-            <h6 style="margin-bottom: 0; font-weight: bold;"> Kelvin Jiang '26</h6>
-            <h6> Logistics </h6>
-        </div>
-        <div class="one-third column u-text-center">
-          <img src="images/Catherine Jia 1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Catherine Jia '26</h6>
-          <h6> Creative </h6>
-      </div>
-      </div>
-
-      <div class="row">
-   
-
-        <div class="one-third column u-text-center">
-          <img src="images/Yiyun.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Yiyun Li '26</h6>
-          <h6> Social </h6>
-      </div>
-      <div class="one-third column u-text-center">
-        <img src="images/Helen Chow1.jpg" style="max-height: 200px; max-width: 200px;">
-        <h6 style="margin-bottom: 0; font-weight: bold;"> Helen Chow '26</h6>
-        <h6> Treasurer </h6>
     </div>
-      <div class="one-third column u-text-center">
-        <div class="easter-egg-container">
-          <img id="easter-egg-image" src="images/Allen Wang1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Allen Wang '26</h6>
-          <h6> Outreach Chair </h6>
-        </div>
-    </div>
-
-      </div>
-
-      <div class="row">
-        <div class="one-third column u-text-center">
-          <img src="images/Daniel Zhao 1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Daniel Zhao '27</h6>
-          <h6> Outreach Chair </h6>
-      </div>
-
-        <div class="one-third column u-text-center">
-          <img src="images/Rosy Sun1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Rosy Sun '27</h6>
-          <h6> Family Chair </h6>
-      </div>
-        <div class="one-third column u-text-center">
-          <img src="images/Athena Deng1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Athena Deng '27</h6>
-          <h6> Family Chair </h6>
-      </div>
-
-      </div>
-
-      <div class="row">
-     
-          <div class="one-third column u-text-center">
-              <img src="images/Irene Lee1.jpg" style="max-height: 200px; max-width: 200px;">
-              <h6 style="margin-bottom: 0; font-weight: bold;"> Irene Zhao '27</h6>
-              <h6> Treasurer </h6>
-          </div>
-          <div class="one-third column u-text-center">
-            <img src="images/Eric Yang1.jpg" style="max-height: 200px; max-width: 200px;">
-            <h6 style="margin-bottom: 0; font-weight: bold;"> Eric Yang '28</h6>
-            <h6> Freshman Rep </h6>
-        </div>
-        <div class="one-third column u-text-center">
-          <img src="images/Amanda Deng1.jpg" style="max-height: 200px; max-width: 200px;">
-          <h6 style="margin-bottom: 0; font-weight: bold;"> Amanda Deng '28</h6>
-          <h6> Freshman Rep </h6>
-      </div>
-      </div>
-
-
-    </div>
-  </div>
-</body>
+  </body>
 </html>
